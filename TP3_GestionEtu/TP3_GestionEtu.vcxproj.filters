@@ -69,6 +69,9 @@
     <ClCompile Include="viewPieChart.cpp">
       <Filter>View</Filter>
     </ClCompile>
+    <ClCompile Include="Controller_Delete.cpp" />
+    <ClCompile Include="Controller_AddForm.cpp" />
+    <ClCompile Include="Controller_DeleteForm.cpp" />
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="TP3_GestionEtu.h">
@@ -96,6 +99,18 @@
     </ClInclude>
     <ClInclude Include="viewForms.h">
       <Filter>View</Filter>
+    </ClInclude>
+    <ClInclude Include="Controller_AddForm.h">
+      <Filter>Controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="Controller_DeleteForm.h">
+      <Filter>Controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="Controller_Delete.h">
+      <Filter>Controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="AbstractController.h">
+      <Filter>Controllers</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

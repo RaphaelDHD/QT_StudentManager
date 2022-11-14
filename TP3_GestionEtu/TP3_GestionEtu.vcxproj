@@ -85,6 +85,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Controller_AddForm.cpp" />
+    <ClCompile Include="Controller_Delete.cpp" />
+    <ClCompile Include="Controller_DeleteForm.cpp" />
     <ClCompile Include="viewForms.cpp" />
     <ClCompile Include="viewHistogram.cpp" />
     <ClCompile Include="viewList.cpp" />
@@ -98,6 +101,10 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AbstractController.h" />
+    <ClInclude Include="Controller_AddForm.h" />
+    <ClInclude Include="Controller_Delete.h" />
+    <ClInclude Include="Controller_DeleteForm.h" />
     <ClInclude Include="student.h" />
     <ClInclude Include="observer.h" />
     <ClInclude Include="promotion.h" />

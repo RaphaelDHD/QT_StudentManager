@@ -20,6 +20,21 @@ QVector<Student*> Promotion::getListe() {
     return studentList;
 }
 
+QVector<Observer*> Promotion::getObserver()
+{
+    return observerList;
+}
+
+void Promotion::remove(QString s)
+{
+    for (int i = 0; i < studentList.size(); i++) {
+        if (QString::number(studentList[i]->getId()) == s) {
+            studentList.removeAt(i);
+        }
+    }
+    notifyObserver();
+}
+
 
 void Promotion::read_list()
 {
@@ -28,6 +43,19 @@ void Promotion::read_list()
     }
 }
 
+void Promotion::notifyObserver() {
+    for (int i = 0; i < getObserver().size(); i++) {
+        observerList[i]->update();
+    }
+}
+
+void Promotion::addObserver(Observer* observer) {
+    observerList.append(observer);
+}
+
+void Promotion::removeObserver(Observer* observer) {
+
+}
 
 Promotion::Promotion(QString &filename)
 {

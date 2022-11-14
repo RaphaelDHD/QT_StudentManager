@@ -14,5 +14,5 @@ public:
   virtual ~Observable() {}
   virtual void addObserver(Observer* observer) = 0;
   virtual void removeObserver(Observer* observer) = 0;
-  virtual void notifyObserver() const = 0;
+  virtual void notifyObserver() = 0;
 };
