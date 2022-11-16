@@ -31,6 +31,7 @@ void ViewForms::update()
 	lastname->setText("");
 	bac->setCurrentIndex(0);
 	departement->setCurrentIndex(0);
+	idDel->setText("");
 }
 
 

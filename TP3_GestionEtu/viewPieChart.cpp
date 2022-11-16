@@ -16,11 +16,12 @@ ViewPieChart::ViewPieChart(Promotion* prom, QGroupBox* b)
 	for (int i = 0; i < dept.size(); i++) {
 		if (dept[i] != 0) {
 			series->append(QString::number(i), dept[i]);
+			cout << QString::number(i).toStdString() << endl;
 		}
 	}
 	chart = new QChart();
 	chart->addSeries(series);
-	chart->setTitle("Proportions H/F");
+	chart->setTitle("Departements");
 	chart->setAnimationOptions(QChart::SeriesAnimations);
 	chartView = new QChartView(chart);
 	chartView->setRenderHint(QPainter::Antialiasing);

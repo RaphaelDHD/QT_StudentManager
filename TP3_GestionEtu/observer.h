@@ -1,5 +1,4 @@
 #pragma once
-#include "promotion.h"
 
 class Observer {
 public:
