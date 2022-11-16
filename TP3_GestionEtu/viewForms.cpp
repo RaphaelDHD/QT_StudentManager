@@ -1,5 +1,6 @@
 #include "viewForms.h"
-
+#include <iostream>
+using namespace std;
 
 ViewForms::ViewForms(Promotion* prom, QLineEdit* first, QLineEdit* last, QLineEdit* identifiant, QComboBox* bacliste, QComboBox* dept, QLineEdit* iddel)
 {
@@ -35,21 +36,29 @@ void ViewForms::update()
 
 void ViewForms::add() {
 	QList<QString> lst;
-	lst.append(id->text());
-	lst.append(firstname->text());
-	lst.append(lastname->text());
-	lst.append(departement->currentText());
-	lst.append(bac->currentText());
-	controller->control(lst);
+	if (id->text() != nullptr && firstname->text() != nullptr && lastname->text() != nullptr) {
+		lst.append(id->text());
+		lst.append(firstname->text());
+		lst.append(lastname->text());
+		lst.append(departement->currentText());
+		lst.append(bac->currentText());
+		controller->control(lst);
+	}
+	else {
+		cout << "Veuillez remplir toutes les champs avant d'ajouter" << endl;
+	}
 }
 
 void ViewForms::del()
 {
-if (idDel->text() != "") {
+if (idDel->text() != nullptr) {
 	QList<QString> lst;
 	lst.append(idDel->text());
 
 
 	controllerDel->control(lst);
+}
+else {
+	cout << "Veuillez remplir tout les champs avant de supprimer un etudiant" << endl;
 }
 }
