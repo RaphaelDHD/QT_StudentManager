@@ -7,6 +7,9 @@
 #include "Controller_DeleteForm.h"
 #include <qcombobox.h>
 
+/**
+ * @brief Class to manage the histogram View
+*/
 class ViewForms : public Observer, public QObject
 {
 private :

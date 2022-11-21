@@ -1,5 +1,11 @@
 #pragma once
 
+
+/**
+ * @brief Class to manage the observer, the dynamic element from the application
+*/
+
+
 class Observer {
 public:
   virtual ~Observer() {}
@@ -7,6 +13,11 @@ public:
 
 
 };
+
+
+/**
+ * @brief Class to manage the observable, 
+*/
 
 class Observable {
 public:

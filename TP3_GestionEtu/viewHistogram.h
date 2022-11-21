@@ -9,6 +9,10 @@
 #include <qgridlayout.h>
 #include "promotion.h"
 
+
+/**
+ * @brief Class to manage the histogram View
+*/
 class ViewHistogram : public Observer, public QObject
 {
 public:

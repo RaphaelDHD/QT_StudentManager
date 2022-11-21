@@ -1,7 +1,12 @@
 #include "viewPieChart.h"
 #include <iostream>
 using namespace std;
-
+/**
+ * Create the view and the pie chart.
+ * 
+ * \param prom pointer to the main promotion
+ * \param b pointer to the groupbox that will integrate the chart
+ */
 ViewPieChart::ViewPieChart(Promotion* prom, QGroupBox* b)
 {
 	promo = prom;
@@ -32,7 +37,10 @@ ViewPieChart::ViewPieChart(Promotion* prom, QGroupBox* b)
 
 	box->setLayout(layout);
 }
-
+/**
+ * Function wich will be called at every update from the application, it update the chart
+ *
+ */
 void ViewPieChart::update()
 {
 	delete chart;

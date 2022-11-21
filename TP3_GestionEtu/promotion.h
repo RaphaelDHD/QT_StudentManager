@@ -4,6 +4,10 @@
 #include <qstring.h>
 #include "observer.h"
 
+/**
+ * The promotion will contain all the student.
+ */
+
 class Promotion : public Observable
 {
 private :

@@ -2,6 +2,18 @@
 #include <iostream>
 using namespace std;
 
+
+/**
+ * Constructor of the view forms.
+ * 
+ * \param prom Pointer to the main promotion
+ * \param first LineEdit for the firstname to add
+ * \param last LineEdit for the lastname to add
+ * \param identifiant LineEdit for the id to add
+ * \param bacliste QCombobox who's contain all the bac available
+ * \param dept QCombobox who's contain all the department available
+ * \param iddel LineEdit for the id to delete
+ */
 ViewForms::ViewForms(Promotion* prom, QLineEdit* first, QLineEdit* last, QLineEdit* identifiant, QComboBox* bacliste, QComboBox* dept, QLineEdit* iddel)
 {
 	promo = prom;
@@ -23,7 +35,10 @@ ViewForms::ViewForms(Promotion* prom, QLineEdit* first, QLineEdit* last, QLineEd
 	controller = new Controller_AddForm(promo);
 	controllerDel = new Controller_DeleteForm(promo);
 }
-
+/**
+ * Function wich will be called at every update from the application, it update all the forms
+ *
+ */
 void ViewForms::update()
 {
 	id->setText("");
@@ -34,6 +49,11 @@ void ViewForms::update()
 	idDel->setText("");
 }
 
+
+/**
+ * This function add a student to promotion, it get the information from the line edits and the combobox.
+ * 
+ */
 
 void ViewForms::add() {
 	QList<QString> lst;
@@ -49,7 +69,10 @@ void ViewForms::add() {
 		cout << "Veuillez remplir toutes les champs avant d'ajouter" << endl;
 	}
 }
-
+/**
+ * this function delete a student from promotion by getting is id from de lineEdit del.
+ * 
+ */
 void ViewForms::del()
 {
 if (idDel->text() != nullptr) {
@@ -63,3 +86,4 @@ else {
 	cout << "Veuillez remplir tout les champs avant de supprimer un etudiant" << endl;
 }
 }
+

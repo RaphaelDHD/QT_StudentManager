@@ -1,7 +1,12 @@
 #include "viewHistogram.h"
 
 
-
+/**
+ * Constructor of the view histogram wich will also create de histogram and integrate it into the page
+ * 
+ * \param prom pointer to the main promotion of the application
+ * \param b pointer to the groupbox wich will contain the chartview
+ */
 
 ViewHistogram::ViewHistogram(Promotion* prom, QGroupBox* b)
 {
@@ -62,6 +67,11 @@ ViewHistogram::ViewHistogram(Promotion* prom, QGroupBox* b)
 	box->setLayout(layout);
 }
 
+
+/**
+ * Function wich will be called at every update from the application, it update the chart
+ * 
+ */
 void ViewHistogram::update() {
 	delete chart;
 	delete chartView;
@@ -92,7 +102,6 @@ void ViewHistogram::update() {
 			nb[3]++;
 		}
 	}
-
 	set[0]->append(nb[0]);
 	set[1]->append(nb[1]);
 	set[2]->append(nb[2]);
@@ -108,7 +117,7 @@ void ViewHistogram::update() {
 	chart->addSeries(series);
 	chart->setTitle("Series de Bac");
 	chart->setAnimationOptions(QChart::SeriesAnimations);
-
+	chart->setScale(1.08);
 
 	chart->legend()->setVisible(true);
 	chart->legend()->setAlignment(Qt::AlignBottom);
