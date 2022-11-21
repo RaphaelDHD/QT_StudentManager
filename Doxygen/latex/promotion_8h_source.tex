@@ -1,0 +1,31 @@
+\hypertarget{promotion_8h_source}{}\doxysection{promotion.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include "{}student.h"{}}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <QVector>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <qstring.h>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}observer.h"{}}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{11 \textcolor{keyword}{class }\mbox{\hyperlink{class_promotion}{Promotion}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_observable}{Observable}}}
+\DoxyCodeLine{12 \{}
+\DoxyCodeLine{13 private :}
+\DoxyCodeLine{14     QVector<Student*> studentList;}
+\DoxyCodeLine{15     \mbox{\hyperlink{class_student}{Student}} selectedStudent;}
+\DoxyCodeLine{16     QVector<Observer*> observerList;}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \textcolor{keyword}{public}: }
+\DoxyCodeLine{19     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_promotion_ada2b3989a9cae7d26b37ab5b2d1acc99}{add}}(\mbox{\hyperlink{class_student}{Student}}* s);}
+\DoxyCodeLine{20     QVector<Student*> \mbox{\hyperlink{class_promotion_a7ae6184a16c3bb76824d34eb75d2d35b}{getListe}}();}
+\DoxyCodeLine{21     QVector<Observer*> getObserver();}
+\DoxyCodeLine{22     \textcolor{keywordtype}{void} remove(QString s);}
+\DoxyCodeLine{23     \textcolor{keywordtype}{void} find(QString i);}
+\DoxyCodeLine{24     \textcolor{keywordtype}{void} removeObserver(\mbox{\hyperlink{class_observer}{Observer}}* observer);}
+\DoxyCodeLine{25     \mbox{\hyperlink{class_promotion}{Promotion}}(QString\& filename);}
+\DoxyCodeLine{26     \textcolor{keywordtype}{void} read\_list();}
+\DoxyCodeLine{27     \textcolor{keywordtype}{void} notifyObserver() \textcolor{keyword}{override};}
+\DoxyCodeLine{28     \textcolor{keywordtype}{void} addObserver(\mbox{\hyperlink{class_observer}{Observer}}* observer);}
+\DoxyCodeLine{29 \};}
+\DoxyCodeLine{30 }
+
+\end{DoxyCode}

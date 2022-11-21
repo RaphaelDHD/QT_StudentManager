@@ -1,0 +1,23 @@
+\hypertarget{view_list_8h_source}{}\doxysection{view\+List.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include "{}promotion.h"{}}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}observer.h"{}}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <qlistwidget.h>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}Controller\_Delete.h"{}}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{12 \textcolor{keyword}{class }\mbox{\hyperlink{class_view_list}{ViewList}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_observer}{Observer}}, \textcolor{keyword}{public} QObject}
+\DoxyCodeLine{13 \{}
+\DoxyCodeLine{14 \textcolor{keyword}{public}:}
+\DoxyCodeLine{15     \mbox{\hyperlink{class_view_list}{ViewList}}(\mbox{\hyperlink{class_promotion}{Promotion}}* prom, QListWidget* q);}
+\DoxyCodeLine{16     \mbox{\hyperlink{class_promotion}{Promotion}}* promo;}
+\DoxyCodeLine{17     QListWidget* liste;}
+\DoxyCodeLine{18     \mbox{\hyperlink{class_abstract_controller}{AbstractController}}* controller;}
+\DoxyCodeLine{19     \textcolor{keywordtype}{void} update();}
+\DoxyCodeLine{20     \textcolor{keywordtype}{void} remove();}
+\DoxyCodeLine{21 \};}
+\DoxyCodeLine{22 }
+
+\end{DoxyCode}

@@ -1,6 +1,12 @@
 #include "TP3_GestionEtu.h"
 #include "promotion.h"
 
+
+/**
+* Constructor for the main window
+* @param prom the promotion that will be used in the application 
+*/
+
 TP3_GestionEtu::TP3_GestionEtu(Promotion* prom,QWidget *parent)
     : QMainWindow(parent)
 {
@@ -16,7 +22,6 @@ TP3_GestionEtu::TP3_GestionEtu(Promotion* prom,QWidget *parent)
     connect(ui.pushButton_delete_list , &QPushButton::pressed , listView, &ViewList::remove);
     connect(ui.pushButton_addStudent, &QPushButton::pressed, listForm, &ViewForms::add);
     connect(ui.pushButton_delete_number, &QPushButton::pressed, listForm, &ViewForms::del);
-    // connect vers le bouton et mettre en 3eme parametre parent du bouton, fonction listView::remove
 
 
 

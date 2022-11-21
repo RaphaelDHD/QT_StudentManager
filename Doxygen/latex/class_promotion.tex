@@ -1,0 +1,94 @@
+\hypertarget{class_promotion}{}\doxysection{Promotion Class Reference}
+\label{class_promotion}\index{Promotion@{Promotion}}
+
+
+{\ttfamily \#include $<$promotion.\+h$>$}
+
+Inheritance diagram for Promotion\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_promotion}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_promotion_ada2b3989a9cae7d26b37ab5b2d1acc99}{add}} (\mbox{\hyperlink{class_student}{Student}} $\ast$s)
+\item 
+QVector$<$ \mbox{\hyperlink{class_student}{Student}} $\ast$ $>$ \mbox{\hyperlink{class_promotion_a7ae6184a16c3bb76824d34eb75d2d35b}{get\+Liste}} ()
+\item 
+\mbox{\Hypertarget{class_promotion_a8170466a808f886d17097d7ec3dfb9ee}\label{class_promotion_a8170466a808f886d17097d7ec3dfb9ee}} 
+QVector$<$ \mbox{\hyperlink{class_observer}{Observer}} $\ast$ $>$ {\bfseries get\+Observer} ()
+\item 
+\mbox{\Hypertarget{class_promotion_a5ca65632123ce2dd41a96a23668a2c03}\label{class_promotion_a5ca65632123ce2dd41a96a23668a2c03}} 
+void {\bfseries remove} (QString s)
+\item 
+\mbox{\Hypertarget{class_promotion_a6b63ba878e762f563e63c9e58ce4b538}\label{class_promotion_a6b63ba878e762f563e63c9e58ce4b538}} 
+void {\bfseries find} (QString i)
+\item 
+void \mbox{\hyperlink{class_promotion_aca1b7f63c5993b80cf6e79a118eca699}{remove\+Observer}} (\mbox{\hyperlink{class_observer}{Observer}} $\ast$observer)
+\item 
+\mbox{\Hypertarget{class_promotion_a90811d2c0e16184bbca69a07cabbe557}\label{class_promotion_a90811d2c0e16184bbca69a07cabbe557}} 
+{\bfseries Promotion} (QString \&filename)
+\item 
+\mbox{\Hypertarget{class_promotion_a51e95e1f23794a6896b79b830ba4b98b}\label{class_promotion_a51e95e1f23794a6896b79b830ba4b98b}} 
+void {\bfseries read\+\_\+list} ()
+\item 
+void \mbox{\hyperlink{class_promotion_a23ad7242585f7b14a5ac34e8ceda9394}{notify\+Observer}} () override
+\item 
+void \mbox{\hyperlink{class_promotion_a2942d234082a29ccf3a4b262ee20e2df}{add\+Observer}} (\mbox{\hyperlink{class_observer}{Observer}} $\ast$observer)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The promotion will contain all the student. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_promotion_ada2b3989a9cae7d26b37ab5b2d1acc99}\label{class_promotion_ada2b3989a9cae7d26b37ab5b2d1acc99}} 
+\index{Promotion@{Promotion}!add@{add}}
+\index{add@{add}!Promotion@{Promotion}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily void Promotion\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_student}{Student}} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Add a student to the promotion \mbox{\Hypertarget{class_promotion_a2942d234082a29ccf3a4b262ee20e2df}\label{class_promotion_a2942d234082a29ccf3a4b262ee20e2df}} 
+\index{Promotion@{Promotion}!addObserver@{addObserver}}
+\index{addObserver@{addObserver}!Promotion@{Promotion}}
+\doxysubsubsection{\texorpdfstring{addObserver()}{addObserver()}}
+{\footnotesize\ttfamily void Promotion\+::add\+Observer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_observer}{Observer}} $\ast$}]{observer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_observable}{Observable}}.
+
+\mbox{\Hypertarget{class_promotion_a7ae6184a16c3bb76824d34eb75d2d35b}\label{class_promotion_a7ae6184a16c3bb76824d34eb75d2d35b}} 
+\index{Promotion@{Promotion}!getListe@{getListe}}
+\index{getListe@{getListe}!Promotion@{Promotion}}
+\doxysubsubsection{\texorpdfstring{getListe()}{getListe()}}
+{\footnotesize\ttfamily QVector$<$ \mbox{\hyperlink{class_student}{Student}} $\ast$ $>$ Promotion\+::get\+Liste (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Return the student list of the promotion \mbox{\Hypertarget{class_promotion_a23ad7242585f7b14a5ac34e8ceda9394}\label{class_promotion_a23ad7242585f7b14a5ac34e8ceda9394}} 
+\index{Promotion@{Promotion}!notifyObserver@{notifyObserver}}
+\index{notifyObserver@{notifyObserver}!Promotion@{Promotion}}
+\doxysubsubsection{\texorpdfstring{notifyObserver()}{notifyObserver()}}
+{\footnotesize\ttfamily void Promotion\+::notify\+Observer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_observable}{Observable}}.
+
+\mbox{\Hypertarget{class_promotion_aca1b7f63c5993b80cf6e79a118eca699}\label{class_promotion_aca1b7f63c5993b80cf6e79a118eca699}} 
+\index{Promotion@{Promotion}!removeObserver@{removeObserver}}
+\index{removeObserver@{removeObserver}!Promotion@{Promotion}}
+\doxysubsubsection{\texorpdfstring{removeObserver()}{removeObserver()}}
+{\footnotesize\ttfamily void Promotion\+::remove\+Observer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_observer}{Observer}} $\ast$}]{observer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_observable}{Observable}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+promotion.\+h\item 
+promotion.\+cpp\end{DoxyCompactItemize}

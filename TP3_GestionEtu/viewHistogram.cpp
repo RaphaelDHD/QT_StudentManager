@@ -4,8 +4,8 @@
 /**
  * Constructor of the view histogram wich will also create de histogram and integrate it into the page
  * 
- * \param prom pointer to the main promotion of the application
- * \param b pointer to the groupbox wich will contain the chartview
+ * @param prom pointer to the main promotion of the application
+ * @param b pointer to the groupbox wich will contain the chartview
  */
 
 ViewHistogram::ViewHistogram(Promotion* prom, QGroupBox* b)
@@ -15,7 +15,7 @@ ViewHistogram::ViewHistogram(Promotion* prom, QGroupBox* b)
 
 	QVector<QBarSet*> set(4, 0);
 
-	set[0] = new QBarSet("STMG");
+	set[0] = new QBarSet("STI");
 	set[1] = new QBarSet("L");
 	set[2] = new QBarSet("S");
 	set[3] = new QBarSet("ES");
@@ -24,7 +24,7 @@ ViewHistogram::ViewHistogram(Promotion* prom, QGroupBox* b)
 
 
 	for (int i = 0; i < promo->getListe().size(); i++) {
-		if (promo->getListe()[i]->getBac() == "STMG") {
+		if (promo->getListe()[i]->getBac() == "STI") {
 			nb[0]++;
 		}
 		if (promo->getListe()[i]->getBac() == "L") {
@@ -80,7 +80,7 @@ void ViewHistogram::update() {
 
 	QVector<QBarSet*> set(4, 0);
 
-	set[0] = new QBarSet("STMG");
+	set[0] = new QBarSet("STI");
 	set[1] = new QBarSet("L");
 	set[2] = new QBarSet("S");
 	set[3] = new QBarSet("ES");
@@ -89,7 +89,7 @@ void ViewHistogram::update() {
 
 
 	for (int i = 0; i < promo->getListe().size(); i++) {
-		if (promo->getListe()[i]->getBac() == "STMG") {
+		if (promo->getListe()[i]->getBac() == "STI") {
 			nb[0]++;
 		}
 		if (promo->getListe()[i]->getBac() == "L") {

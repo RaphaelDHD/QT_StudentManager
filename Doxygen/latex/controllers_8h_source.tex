@@ -1,0 +1,104 @@
+\hypertarget{controllers_8h_source}{}\doxysection{controllers.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include <QStringList>}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <QMessageBox>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}promotion.h"{}}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{10 \textcolor{keyword}{class }\mbox{\hyperlink{class_abstract_controller}{AbstractController}}}
+\DoxyCodeLine{11 \{}
+\DoxyCodeLine{12 \textcolor{keyword}{public}:}
+\DoxyCodeLine{13   \textcolor{keyword}{virtual} \mbox{\hyperlink{class_abstract_controller}{\string~AbstractController}}() \{\}}
+\DoxyCodeLine{14   \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} control(\textcolor{keyword}{const} QStringList\& list) = 0;}
+\DoxyCodeLine{15 \};}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{21 \textcolor{keyword}{class }\mbox{\hyperlink{class_controller___delete_list}{Controller\_DeleteList}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_abstract_controller}{AbstractController}}}
+\DoxyCodeLine{22 \{}
+\DoxyCodeLine{23 \textcolor{keyword}{private}:}
+\DoxyCodeLine{24   \mbox{\hyperlink{class_promotion}{Promotion}}* promo;}
+\DoxyCodeLine{25 \textcolor{keyword}{public}:}
+\DoxyCodeLine{29   \mbox{\hyperlink{class_controller___delete_list_adc12f0cd84748c499610278481b58283}{Controller\_DeleteList}}(\mbox{\hyperlink{class_promotion}{Promotion}}* promo) : promo(promo) \{\}}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{34   \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_controller___delete_list_ae458c10e1312d6cd87736c02f67237ef}{control}}(\textcolor{keyword}{const} QStringList\& list)\textcolor{keyword}{ override}}
+\DoxyCodeLine{35 \textcolor{keyword}{  }\{}
+\DoxyCodeLine{36         \textcolor{comment}{// Check the number of parameters}}
+\DoxyCodeLine{37         \textcolor{comment}{//if (list.size() != 1) return;}}
+\DoxyCodeLine{38     \textcolor{keywordflow}{for} (QString student: list)}
+\DoxyCodeLine{39     \{}
+\DoxyCodeLine{40         promo-\/>remove(student);}
+\DoxyCodeLine{41     \}}
+\DoxyCodeLine{42   \}}
+\DoxyCodeLine{43 \};}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{49 \textcolor{keyword}{class }\mbox{\hyperlink{class_controller___add_form}{Controller\_AddForm}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_abstract_controller}{AbstractController}}}
+\DoxyCodeLine{50 \{}
+\DoxyCodeLine{51 \textcolor{keyword}{private}:}
+\DoxyCodeLine{52     \mbox{\hyperlink{class_promotion}{Promotion}}* promo;}
+\DoxyCodeLine{53 \textcolor{keyword}{public}:}
+\DoxyCodeLine{57     \mbox{\hyperlink{class_controller___add_form_a3d6e9862c94bba7664e02d609152bc37}{Controller\_AddForm}}(\mbox{\hyperlink{class_promotion}{Promotion}}* promo) : promo(promo) \{\}}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{62     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_controller___add_form_ad5e3a5d34a59ff08fb8ebb3730fe5156}{control}}(\textcolor{keyword}{const} QStringList\& list)\textcolor{keyword}{ override}}
+\DoxyCodeLine{63 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{64         \textcolor{comment}{// Check the number of parameters}}
+\DoxyCodeLine{65         \textcolor{keywordflow}{if} (list.size() != 5) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67         \textcolor{comment}{// Check if the ID already exist}}
+\DoxyCodeLine{68         \mbox{\hyperlink{class_student}{Student}} studentOld = promo-\/>find(list[0]);}
+\DoxyCodeLine{69         \textcolor{keywordflow}{if} (studentOld.getCardID() != \textcolor{stringliteral}{"{}"{}})}
+\DoxyCodeLine{70         \{}
+\DoxyCodeLine{71             \textcolor{comment}{// Create an error}}
+\DoxyCodeLine{72             QMessageBox::warning(\textcolor{keyword}{nullptr},\textcolor{stringliteral}{"{}Add Student"{}},\textcolor{stringliteral}{"{}The student already exist."{}});}
+\DoxyCodeLine{73             \textcolor{keywordflow}{return};}
+\DoxyCodeLine{74         \}}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{76         \textcolor{comment}{// Check the others parameters not NULL}}
+\DoxyCodeLine{77         \textcolor{keywordflow}{if} (list[0] == \textcolor{stringliteral}{"{}"{}})}
+\DoxyCodeLine{78         \{}
+\DoxyCodeLine{79             QMessageBox::warning(\textcolor{keyword}{nullptr}, \textcolor{stringliteral}{"{}Add Student"{}}, \textcolor{stringliteral}{"{}The card ID is empty."{}}); \textcolor{keywordflow}{return};}
+\DoxyCodeLine{80         \}}
+\DoxyCodeLine{81         \textcolor{keywordflow}{if} (list[1] == \textcolor{stringliteral}{"{}"{}})}
+\DoxyCodeLine{82         \{}
+\DoxyCodeLine{83             QMessageBox::warning(\textcolor{keyword}{nullptr}, \textcolor{stringliteral}{"{}Add Student"{}}, \textcolor{stringliteral}{"{}The firstname is empty."{}}); \textcolor{keywordflow}{return};}
+\DoxyCodeLine{84         \}}
+\DoxyCodeLine{85         \textcolor{keywordflow}{if} (list[2] == \textcolor{stringliteral}{"{}"{}})}
+\DoxyCodeLine{86         \{}
+\DoxyCodeLine{87             QMessageBox::warning(\textcolor{keyword}{nullptr}, \textcolor{stringliteral}{"{}Add Student"{}}, \textcolor{stringliteral}{"{}The lastname is empty."{}}); \textcolor{keywordflow}{return};}
+\DoxyCodeLine{88         \}}
+\DoxyCodeLine{89         \textcolor{keywordflow}{if} (list[3] == \textcolor{stringliteral}{"{}"{}})}
+\DoxyCodeLine{90         \{}
+\DoxyCodeLine{91             QMessageBox::warning(\textcolor{keyword}{nullptr}, \textcolor{stringliteral}{"{}Add Student"{}}, \textcolor{stringliteral}{"{}The bac is empty."{}}); \textcolor{keywordflow}{return};}
+\DoxyCodeLine{92         \}}
+\DoxyCodeLine{93         \textcolor{keywordflow}{if} (list[4] == \textcolor{stringliteral}{"{}"{}})}
+\DoxyCodeLine{94         \{}
+\DoxyCodeLine{95             QMessageBox::warning(\textcolor{keyword}{nullptr}, \textcolor{stringliteral}{"{}Add Student"{}}, \textcolor{stringliteral}{"{}The department is empty."{}}); \textcolor{keywordflow}{return};}
+\DoxyCodeLine{96         \}}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{98         \textcolor{comment}{// Create and add the new student}}
+\DoxyCodeLine{99         \mbox{\hyperlink{class_student}{Student}} studentNew(list[0], list[1], list[2], list[3], list[4]);}
+\DoxyCodeLine{100         promo-\/>\mbox{\hyperlink{class_promotion_ada2b3989a9cae7d26b37ab5b2d1acc99}{add}}(studentNew);}
+\DoxyCodeLine{101     \}}
+\DoxyCodeLine{102 \};}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{108 \textcolor{keyword}{class }\mbox{\hyperlink{class_controller___delete_form}{Controller\_DeleteForm}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_abstract_controller}{AbstractController}}}
+\DoxyCodeLine{109 \{}
+\DoxyCodeLine{110 \textcolor{keyword}{private}:}
+\DoxyCodeLine{111     \mbox{\hyperlink{class_promotion}{Promotion}}* promo;}
+\DoxyCodeLine{112 \textcolor{keyword}{public}:}
+\DoxyCodeLine{116     \mbox{\hyperlink{class_controller___delete_form_ac45623c224d6bb6381277ab16ea73b47}{Controller\_DeleteForm}}(\mbox{\hyperlink{class_promotion}{Promotion}}* promo) : promo(promo) \{\}}
+\DoxyCodeLine{117 }
+\DoxyCodeLine{121     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_controller___delete_form_adaf1be86da891a8c1a8adfb33138ce3a}{control}}(\textcolor{keyword}{const} QStringList\& list)\textcolor{keyword}{ override}}
+\DoxyCodeLine{122 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{123         \textcolor{comment}{// Check the number of parameters}}
+\DoxyCodeLine{124         \textcolor{keywordflow}{if} (list.size() != 1) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{125 }
+\DoxyCodeLine{126         \textcolor{comment}{// Search the student}}
+\DoxyCodeLine{127         \mbox{\hyperlink{class_student}{Student}} student = promo-\/>find(list[0]);}
+\DoxyCodeLine{128 }
+\DoxyCodeLine{129         \textcolor{comment}{// Check if the student has been found}}
+\DoxyCodeLine{130         \textcolor{keywordflow}{if} (student.getCardID()!=\textcolor{stringliteral}{"{}"{}})}
+\DoxyCodeLine{131             promo-\/>remove(student);}
+\DoxyCodeLine{132     \}}
+\DoxyCodeLine{133 \};}
+
+\end{DoxyCode}

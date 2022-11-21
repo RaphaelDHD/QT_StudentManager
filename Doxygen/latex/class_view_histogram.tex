@@ -1,0 +1,64 @@
+\hypertarget{class_view_histogram}{}\doxysection{View\+Histogram Class Reference}
+\label{class_view_histogram}\index{ViewHistogram@{ViewHistogram}}
+
+
+Class to manage the histogram View.  
+
+
+
+
+{\ttfamily \#include $<$view\+Histogram.\+h$>$}
+
+Inheritance diagram for View\+Histogram\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_view_histogram}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_view_histogram_ac734cebf177180111c7374dffd60efa4}{View\+Histogram}} (\mbox{\hyperlink{class_promotion}{Promotion}} $\ast$prom, QGroup\+Box $\ast$b)
+\item 
+void \mbox{\hyperlink{class_view_histogram_ac982322419a53d2b27af940e11db8c39}{update}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class to manage the histogram View. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_view_histogram_ac734cebf177180111c7374dffd60efa4}\label{class_view_histogram_ac734cebf177180111c7374dffd60efa4}} 
+\index{ViewHistogram@{ViewHistogram}!ViewHistogram@{ViewHistogram}}
+\index{ViewHistogram@{ViewHistogram}!ViewHistogram@{ViewHistogram}}
+\doxysubsubsection{\texorpdfstring{ViewHistogram()}{ViewHistogram()}}
+{\footnotesize\ttfamily View\+Histogram\+::\+View\+Histogram (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_promotion}{Promotion}} $\ast$}]{prom,  }\item[{QGroup\+Box $\ast$}]{b }\end{DoxyParamCaption})}
+
+Constructor of the view histogram wich will also create de histogram and integrate it into the page
+
+
+\begin{DoxyParams}{Parameters}
+{\em prom} & pointer to the main promotion of the application \\
+\hline
+{\em b} & pointer to the groupbox wich will contain the chartview \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_view_histogram_ac982322419a53d2b27af940e11db8c39}\label{class_view_histogram_ac982322419a53d2b27af940e11db8c39}} 
+\index{ViewHistogram@{ViewHistogram}!update@{update}}
+\index{update@{update}!ViewHistogram@{ViewHistogram}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void View\+Histogram\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Function wich will be called at every update from the application, it update the chart 
+
+Implements \mbox{\hyperlink{class_observer}{Observer}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+view\+Histogram.\+h\item 
+view\+Histogram.\+cpp\end{DoxyCompactItemize}

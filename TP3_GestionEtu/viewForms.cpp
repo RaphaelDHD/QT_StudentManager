@@ -31,7 +31,7 @@ ViewForms::ViewForms(Promotion* prom, QLineEdit* first, QLineEdit* last, QLineEd
 	bac->addItem("S");
 	bac->addItem("ES");
 	bac->addItem("L");
-	bac->addItem("STMG");
+	bac->addItem("STI");
 	controller = new Controller_AddForm(promo);
 	controllerDel = new Controller_DeleteForm(promo);
 }

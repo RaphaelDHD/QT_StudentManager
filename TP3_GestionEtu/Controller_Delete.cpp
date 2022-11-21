@@ -2,6 +2,10 @@
 #include <qstring.h>
 
 
+/*
+* The controller used to delete a student from the promotion
+* @param prom the promotion 
+*/
 Controller_Delete::Controller_Delete(Promotion* prom)
 {
 	promo = prom;

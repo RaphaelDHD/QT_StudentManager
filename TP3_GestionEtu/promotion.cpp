@@ -11,19 +11,37 @@
 
 using namespace std;
 
+/**
+* Add a student to the promotion
+*
+*/
 void Promotion::add(Student* s)
 {
     studentList.append(s);
 }
 
+
+/**
+* Return the student list of the promotion
+*
+*/
 QVector<Student*> Promotion::getListe() {
     return studentList;
 }
 
+/*
+* Return the list of all the observer of the promotion
+*
+*/
 QVector<Observer*> Promotion::getObserver()
 {
     return observerList;
 }
+
+/*
+* Remove a student from the list in the promotion
+*   @param s id of the student you want to remove
+*/
 
 void Promotion::remove(QString s)
 {
@@ -36,6 +54,12 @@ void Promotion::remove(QString s)
 }
 
 
+/*
+*   Print in console all the element of the list
+*
+*
+*/
+
 void Promotion::read_list()
 {
     for (auto& it : studentList) {
@@ -43,20 +67,41 @@ void Promotion::read_list()
     }
 }
 
+
+/*
+*   Notify all the observer in the observer list
+*
+*/
 void Promotion::notifyObserver() {
     for (int i = 0; i < getObserver().size(); i++) {
         observerList[i]->update();
     }
 }
 
+/*
+*   Add an observer to the observer list
+* @param observer The observer you want to add to your list
+*
+*/
+
 void Promotion::addObserver(Observer* observer) {
     observerList.append(observer);
 }
 
+
+/*
+*   Remove an observer from the list
+* @param observer The observer you want to remove from your list
+*/
 void Promotion::removeObserver(Observer* observer) {
 
 }
 
+
+/*
+*   Constructor of the promotion
+*   @filename the name of the file wich will load all the students
+*/
 Promotion::Promotion(QString &filename)
 {
     QString line;

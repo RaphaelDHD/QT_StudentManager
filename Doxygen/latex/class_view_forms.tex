@@ -1,0 +1,90 @@
+\hypertarget{class_view_forms}{}\doxysection{View\+Forms Class Reference}
+\label{class_view_forms}\index{ViewForms@{ViewForms}}
+
+
+Class to manage the forms View.  
+
+
+
+
+{\ttfamily \#include $<$view\+Forms.\+h$>$}
+
+Inheritance diagram for View\+Forms\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_view_forms}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_view_forms_a8432f5874797f23e9614e015315113c0}{View\+Forms}} (\mbox{\hyperlink{class_promotion}{Promotion}} $\ast$prom, QLine\+Edit $\ast$first, QLine\+Edit $\ast$last, QLine\+Edit $\ast$identifiant, QCombo\+Box $\ast$bacliste, QCombo\+Box $\ast$dept, QLine\+Edit $\ast$iddel)
+\item 
+void \mbox{\hyperlink{class_view_forms_af49b7c6130c056709461b09105864e5e}{update}} ()
+\item 
+void \mbox{\hyperlink{class_view_forms_a30b83ad33d418874a15cf4a2f6bd892e}{add}} ()
+\item 
+void \mbox{\hyperlink{class_view_forms_a0cdcc7e6ccdafce8be743c726dcc298a}{del}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class to manage the forms View. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_view_forms_a8432f5874797f23e9614e015315113c0}\label{class_view_forms_a8432f5874797f23e9614e015315113c0}} 
+\index{ViewForms@{ViewForms}!ViewForms@{ViewForms}}
+\index{ViewForms@{ViewForms}!ViewForms@{ViewForms}}
+\doxysubsubsection{\texorpdfstring{ViewForms()}{ViewForms()}}
+{\footnotesize\ttfamily View\+Forms\+::\+View\+Forms (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_promotion}{Promotion}} $\ast$}]{prom,  }\item[{QLine\+Edit $\ast$}]{first,  }\item[{QLine\+Edit $\ast$}]{last,  }\item[{QLine\+Edit $\ast$}]{identifiant,  }\item[{QCombo\+Box $\ast$}]{bacliste,  }\item[{QCombo\+Box $\ast$}]{dept,  }\item[{QLine\+Edit $\ast$}]{iddel }\end{DoxyParamCaption})}
+
+Constructor of the view forms.
+
+
+\begin{DoxyParams}{Parameters}
+{\em prom} & Pointer to the main promotion \\
+\hline
+{\em first} & Line\+Edit for the firstname to add \\
+\hline
+{\em last} & Line\+Edit for the lastname to add \\
+\hline
+{\em identifiant} & Line\+Edit for the id to add \\
+\hline
+{\em bacliste} & QCombobox who\textquotesingle{}s contain all the bac available \\
+\hline
+{\em dept} & QCombobox who\textquotesingle{}s contain all the department available \\
+\hline
+{\em iddel} & Line\+Edit for the id to delete \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_view_forms_a30b83ad33d418874a15cf4a2f6bd892e}\label{class_view_forms_a30b83ad33d418874a15cf4a2f6bd892e}} 
+\index{ViewForms@{ViewForms}!add@{add}}
+\index{add@{add}!ViewForms@{ViewForms}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily void View\+Forms\+::add (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This function add a student to promotion, it get the information from the line edits and the combobox. \mbox{\Hypertarget{class_view_forms_a0cdcc7e6ccdafce8be743c726dcc298a}\label{class_view_forms_a0cdcc7e6ccdafce8be743c726dcc298a}} 
+\index{ViewForms@{ViewForms}!del@{del}}
+\index{del@{del}!ViewForms@{ViewForms}}
+\doxysubsubsection{\texorpdfstring{del()}{del()}}
+{\footnotesize\ttfamily void View\+Forms\+::del (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+this function delete a student from promotion by getting is id from de line\+Edit del. \mbox{\Hypertarget{class_view_forms_af49b7c6130c056709461b09105864e5e}\label{class_view_forms_af49b7c6130c056709461b09105864e5e}} 
+\index{ViewForms@{ViewForms}!update@{update}}
+\index{update@{update}!ViewForms@{ViewForms}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void View\+Forms\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Function wich will be called at every update from the application, it update all the forms 
+
+Implements \mbox{\hyperlink{class_observer}{Observer}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+view\+Forms.\+h\item 
+view\+Forms.\+cpp\end{DoxyCompactItemize}

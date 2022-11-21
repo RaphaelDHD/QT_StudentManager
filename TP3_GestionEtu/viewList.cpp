@@ -4,6 +4,10 @@
 
 using namespace std;
 
+
+/* Create the view for the list of student
+* @param prom the promotion that will be show in the list
+*/
 ViewList::ViewList(Promotion* prom, QListWidget* q)
 {
 	promo = prom;

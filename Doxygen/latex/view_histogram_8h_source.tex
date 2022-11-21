@@ -1,0 +1,31 @@
+\hypertarget{view_histogram_8h_source}{}\doxysection{view\+Histogram.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include "{}observer.h"{}}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <qobject.h>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <qgroupbox.h>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <qbarset.h>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <qbarseries.h>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <qchart.h>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <qchartview.h>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <qgridlayout.h>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}promotion.h"{}}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 }
+\DoxyCodeLine{16 \textcolor{keyword}{class }\mbox{\hyperlink{class_view_histogram}{ViewHistogram}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_observer}{Observer}}, \textcolor{keyword}{public} QObject}
+\DoxyCodeLine{17 \{}
+\DoxyCodeLine{18 \textcolor{keyword}{public}:}
+\DoxyCodeLine{19     \mbox{\hyperlink{class_view_histogram_ac734cebf177180111c7374dffd60efa4}{ViewHistogram}}(\mbox{\hyperlink{class_promotion}{Promotion}}* prom, QGroupBox* b);}
+\DoxyCodeLine{20     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_view_histogram_ac982322419a53d2b27af940e11db8c39}{update}}();}
+\DoxyCodeLine{21 \textcolor{keyword}{private}:}
+\DoxyCodeLine{22     \mbox{\hyperlink{class_promotion}{Promotion}}* promo;}
+\DoxyCodeLine{23     QVector<QBarSet*> set;}
+\DoxyCodeLine{24     QBarSeries* series;}
+\DoxyCodeLine{25     QChart* chart;}
+\DoxyCodeLine{26     QChartView* chartView;}
+\DoxyCodeLine{27     QGridLayout* layout;}
+\DoxyCodeLine{28     QGroupBox* box;}
+\DoxyCodeLine{29 \};}
+
+\end{DoxyCode}

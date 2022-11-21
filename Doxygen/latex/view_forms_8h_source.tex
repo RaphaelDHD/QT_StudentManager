@@ -1,0 +1,34 @@
+\hypertarget{view_forms_8h_source}{}\doxysection{view\+Forms.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include "{}promotion.h"{}}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}observer.h"{}}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <qlineedit.h>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}Controller\_AddForm.h"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}Controller\_DeleteForm.h"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <qcombobox.h>}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{13 \textcolor{keyword}{class }\mbox{\hyperlink{class_view_forms}{ViewForms}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_observer}{Observer}}, \textcolor{keyword}{public} QObject}
+\DoxyCodeLine{14 \{}
+\DoxyCodeLine{15 private :}
+\DoxyCodeLine{16     \mbox{\hyperlink{class_promotion}{Promotion}}* promo;}
+\DoxyCodeLine{17     QLineEdit* firstname;}
+\DoxyCodeLine{18     QLineEdit* lastname;}
+\DoxyCodeLine{19     QLineEdit* id;}
+\DoxyCodeLine{20     QComboBox* bac;}
+\DoxyCodeLine{21     QComboBox* departement;}
+\DoxyCodeLine{22     \mbox{\hyperlink{class_abstract_controller}{AbstractController}}* controller;}
+\DoxyCodeLine{23     \mbox{\hyperlink{class_abstract_controller}{AbstractController}}* controllerDel;}
+\DoxyCodeLine{24     QLineEdit* idDel;}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 \textcolor{keyword}{public}:}
+\DoxyCodeLine{27     \mbox{\hyperlink{class_view_forms_a8432f5874797f23e9614e015315113c0}{ViewForms}}(\mbox{\hyperlink{class_promotion}{Promotion}}* prom, QLineEdit* first, QLineEdit* last, QLineEdit* identifiant, QComboBox* bacliste, QComboBox* dept, QLineEdit* iddel);}
+\DoxyCodeLine{28     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_view_forms_af49b7c6130c056709461b09105864e5e}{update}}();}
+\DoxyCodeLine{29     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_view_forms_a30b83ad33d418874a15cf4a2f6bd892e}{add}}();}
+\DoxyCodeLine{30     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_view_forms_a0cdcc7e6ccdafce8be743c726dcc298a}{del}}();}
+\DoxyCodeLine{31 \};}
+\DoxyCodeLine{32 }
+
+\end{DoxyCode}

@@ -8,7 +8,7 @@
 #include <qcombobox.h>
 
 /**
- * @brief Class to manage the histogram View
+ * @brief Class to manage the forms View
 */
 class ViewForms : public Observer, public QObject
 {
